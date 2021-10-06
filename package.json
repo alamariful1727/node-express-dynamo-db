@@ -1,0 +1,18 @@
+{
+	"name": "node-express-dynamo-db",
+	"version": "1.0.0",
+	"description": "CRUD API with Node.js, Express.js and Dynamo DB",
+	"main": "index.js",
+	"scripts": {
+		"start": "node index",
+		"dev": "nodemon index"
+	},
+	"author": "Ariful Alam",
+	"license": "ISC",
+	"dependencies": {
+		"aws-sdk": "^2.1001.0",
+		"dotenv": "^10.0.0",
+		"express": "^4.17.1",
+		"morgan": "^1.10.0"
+	}
+}
