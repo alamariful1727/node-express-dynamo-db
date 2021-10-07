@@ -21,7 +21,7 @@ app.get('/items', async (req, res) => {
 		res.status(200).json(items);
 	} catch (err) {
 		console.error(err);
-		res.status(500).json({ message: err.message || 'Something went wrong' });
+		res.status(err.statusCode || 500).json({ message: err.message || 'Something went wrong' });
 	}
 });
 
@@ -34,7 +34,7 @@ app.post('/items', async (req, res) => {
 		res.status(200).json(body);
 	} catch (err) {
 		console.error(err);
-		res.status(500).json({ message: err.message || 'Something went wrong' });
+		res.status(err.statusCode || 500).json({ message: err.message || 'Something went wrong' });
 	}
 });
 
@@ -46,7 +46,7 @@ app.put('/items/:id', async (req, res) => {
 		res.status(200).json(item);
 	} catch (err) {
 		console.error(err);
-		res.status(500).json({ message: err.message || 'Something went wrong' });
+		res.status(err.statusCode || 500).json({ message: err.message || 'Something went wrong' });
 	}
 });
 
@@ -57,7 +57,7 @@ app.get('/items/:id', async (req, res) => {
 		res.status(200).json(item);
 	} catch (err) {
 		console.error(err);
-		res.status(500).json({ message: err.message || 'Something went wrong' });
+		res.status(err.statusCode || 500).json({ message: err.message || 'Something went wrong' });
 	}
 });
 
@@ -68,7 +68,7 @@ app.delete('/items/:id', async (req, res) => {
 		res.status(200).json(item);
 	} catch (err) {
 		console.error(err);
-		res.status(500).json({ message: err.message || 'Something went wrong' });
+		res.status(err.statusCode || 500).json({ message: err.message || 'Something went wrong' });
 	}
 });
 
